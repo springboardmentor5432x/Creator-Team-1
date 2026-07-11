@@ -1,0 +1,27 @@
+/* App custom utility classes */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Custom chart tooltip styles to match Swiss Dark aesthetic */
+.custom-recharts-tooltip {
+  background: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid #27272A;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
