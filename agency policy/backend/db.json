@@ -1,0 +1,135 @@
+{
+  "creators": [
+    {
+      "id": "c1",
+      "name": "Evelyn Sterling",
+      "handle": "@evelynsterling",
+      "platform": "Instagram",
+      "followers": 1420000,
+      "engagement_rate": 4.8,
+      "avatar": "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+      "status": "Active",
+      "campaigns": 8,
+      "category": "Fashion & Luxury",
+      "joined_date": "2025-01-15T00:00:00Z"
+    },
+    {
+      "id": "c2",
+      "name": "Julian Vance",
+      "handle": "@julianvance",
+      "platform": "YouTube",
+      "followers": 3200000,
+      "engagement_rate": 6.2,
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+      "status": "Active",
+      "campaigns": 12,
+      "category": "Tech & Architecture",
+      "joined_date": "2024-11-10T00:00:00Z"
+    },
+    {
+      "id": "c3",
+      "name": "Clara Valerius",
+      "handle": "@claravalerius",
+      "platform": "TikTok",
+      "followers": 5700000,
+      "engagement_rate": 8.5,
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+      "status": "Active",
+      "campaigns": 15,
+      "category": "Lifestyle & Design",
+      "joined_date": "2025-02-01T00:00:00Z"
+    },
+    {
+      "id": "c4",
+      "name": "Marcus Kane",
+      "handle": "@marcuskane",
+      "platform": "Twitch",
+      "followers": 890000,
+      "engagement_rate": 11.2,
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "status": "On Break",
+      "campaigns": 3,
+      "category": "Gaming & Tech",
+      "joined_date": "2024-08-20T00:00:00Z"
+    }
+  ],
+  "agency_profile": [
+    {
+      "id": "agency_1",
+      "name": "PriyaAgency",
+      "tagline": "Curating high-end digital creators for Luxury Swiss brands.",
+      "logo": "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+      "banner": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMG1pbmltYWwlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODM3NjQxMDR8MA&ixlib=rb-4.1.0&q=85",
+      "email": "contact@priya.ch",
+      "phone": "+41 22 730 42 11",
+      "website": "https://priyach",
+      "location": "india",
+      "total_followers": 11210000,
+      "campaigns_completed": 142,
+      "active_campaigns": 38,
+      "monthly_reach": 42500000
+    }
+  ],
+  "settings": [
+    {
+      "id": "settings_1",
+      "currency": "USD",
+      "theme": "dark",
+      "database_mode": "JSON DB Local Fallback",
+      "api_endpoint": "/api",
+      "default_language": "en"
+    }
+  ],
+  "social_media": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "connected": false,
+      "followers": 1420000,
+      "posts": 430,
+      "engagement": 4.8
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "connected": true,
+      "followers": 3200000,
+      "videos": 182,
+      "engagement": 6.2
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "connected": false,
+      "followers": 5700000,
+      "videos": 520,
+      "engagement": 8.5
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "connected": false,
+      "followers": 890000,
+      "stream_hours": 0,
+      "engagement": 11.2
+    }
+  ],
+  "users": [
+    {
+      "id": "c32d2761-95e4-4b12-8018-95e729ab2a54",
+      "name": "priya",
+      "email": "priya@gmail.com",
+      "hashed_password": "$2b$12$5EWRfjIlUatr.xBpwbgRmuoUkKgRMdC3gNugDw8K.f5nVjtud/Tdq",
+      "agency_name": "nova",
+      "created_at": "2026-07-11T12:09:37.725783+00:00"
+    },
+    {
+      "id": "8ab41984-84da-4ba6-b8b3-687df20eb448",
+      "name": "john",
+      "email": "john@gmail.com",
+      "hashed_password": "$2b$12$1McwWHZJYXd3XPbaNhuN4u5rjzYrDfzEnOtCLOPbp49.OYewQ5VQK",
+      "agency_name": "john",
+      "created_at": "2026-07-11T14:43:40.681281+00:00"
+    }
+  ]
+}
