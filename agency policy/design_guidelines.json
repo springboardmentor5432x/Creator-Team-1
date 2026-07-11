@@ -1,0 +1,140 @@
+{
+  "project_name": "CreatorIQ - Agency Dashboard",
+  "theme_strategy": {
+    "default_theme": "dark",
+    "rationale": "For SaaS analytics dashboards in 2026, dark mode is critical. It prevents eye strain during extended sessions and allows metrics to pop. We follow ARCHETYPE 5 (LUXURY) mixed with ARCHETYPE 4 (SWISS). Deep, cinematic, but functionally rigorous."
+  },
+  "typography": {
+    "headings": {
+      "font_family": "Outfit",
+      "weights": ["400", "500", "700"],
+      "usage": "Use for all H1-H4 headings, key metric numbers (KPIs), and brand logo.",
+      "letter_spacing": "tracking-tight for sizes > 24px"
+    },
+    "body": {
+      "font_family": "Manrope",
+      "weights": ["400", "500", "600"],
+      "usage": "Use for all body text, tables, sub-labels, and tooltips."
+    },
+    "guidelines": "Inter is BANNED for headings. Ensure tight line heights (leading-none) for metric values."
+  },
+  "colors": {
+    "background": {
+      "page": "#0A0A0A",
+      "card": "#121212",
+      "hover": "#1A1A1A"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "border": {
+      "default": "#27272A",
+      "focus": "#52525B"
+    },
+    "accents": {
+      "primary": "#E4E4E7",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "destructive": "#EF4444",
+      "chart_1": "#FFFFFF",
+      "chart_2": "#71717A",
+      "chart_3": "#3F3F46"
+    },
+    "guidelines": "Avoid pure black (#000000). Use Deep Obsidian (#0A0A0A). Reserve bright colors ONLY for status/alerts. Charts should use monochrome/neutral shades to maintain a premium feel. DO NOT use teal green (#1B93A4) for dashboards."
+  },
+  "layouts_and_grids": {
+    "dashboard_overview": {
+      "pattern": "Bento Grid Mode B (High Density)",
+      "classes": "grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6",
+      "rules": "Every pixel must be utilized. Use 'h-full' on children to ensure they stretch to match their neighbors. No jagged bottoms."
+    },
+    "spacing_system": "Generous Spacing Philosophy. Use p-6 or p-8 inside cards. Containers with borders MUST have internal padding to prevent text collision."
+  },
+  "surfaces_and_components": {
+    "cards": {
+      "style": "Neumorphism / Technical Grid Hybrid",
+      "classes": "bg-[#121212] border border-[#27272A] rounded-xl overflow-hidden",
+      "hover": "hover:border-[#52525B] transition-colors duration-200"
+    },
+    "headers": {
+      "style": "Glassmorphism (Optical Clarity)",
+      "classes": "sticky top-0 z-50 bg-[#0A0A0A]/80 backdrop-blur-xl border-b border-[#27272A]"
+    },
+    "buttons": {
+      "primary": "bg-white text-black hover:bg-neutral-200 font-medium rounded-lg",
+      "secondary": "bg-transparent border border-[#27272A] text-white hover:bg-[#1A1A1A] font-medium rounded-lg"
+    },
+    "tables": "Row separation via 1px solid bottom border (#27272A) and distinct hover states (hover:bg-[#121212]). Text contrast must be crisp."
+  },
+  "analytics_and_charts": {
+    "library": "Recharts",
+    "rules": [
+      "Distinguish chart series by stroke style or distinct neutral shades, not just saturation.",
+      "Remove all default grid lines or make them extremely subtle (stroke='#27272A', strokeDasharray='3 3').",
+      "Tooltips must use the Glassmorphism style with high-contrast text.",
+      "Ensure charts remain legible without relying on fuzzy shadows."
+    ]
+  },
+  "motion_and_interactions": {
+    "rules": [
+      "Hover states for all interactive elements are MANDATORY.",
+      "Use specific transitions (e.g., transition-colors, transition-transform), NEVER transition-all.",
+      "Entrance animations: Staggered fade-up for list items/table rows.",
+      "Focus states MUST have higher contrast than default."
+    ]
+  },
+  "icons": {
+    "library": "lucide-react",
+    "sizing": "Use w-5 h-5 for standard icons, w-4 h-4 for inline metrics.",
+    "stroke_width": "1.5"
+  },
+  "image_urls": {
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1699899657680-421c2c2d5064?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHw0fHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Female creator avatar",
+        "category": "creator_management"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Male creator avatar",
+        "category": "creator_management"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwzfHxwcm9mZXNzaW9uYWwlMjBoZWFkc2hvdCUyMHBvcnRyYWl0fGVufDB8fHx8MTc4MzcwMTA4OXww&ixlib=rb-4.1.0&q=85",
+        "description": "Female creator avatar 2",
+        "category": "creator_management"
+      }
+    ],
+    "backgrounds": [
+      {
+        "url": "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMG1pbmltYWwlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3ODM3NjQxMDR8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract minimal dark background for agency banner or hero",
+        "category": "agency_profile"
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Maintain 4.5:1 minimum contrast for text. Use APCA guidelines for critical data.",
+    "testing": "All interactive elements (buttons, inputs, menu items, table actions) MUST include data-testid attributes (e.g., data-testid='add-creator-btn')."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic outputs. Break the mold. Make this dashboard feel like a high-end, cinematic tool for professional creators.",
+    "Never use pure black or simplistic gradients. Create depth with 1px borders and distinct #121212 / #1A1A1A layer separation.",
+    "Do NOT apply universal transitions (transition: all).",
+    "Do NOT center align the app container text.",
+    "NEVER use placeholder URLs (via.placeholder.com). Use the provided image_urls.",
+    "Prioritize Shadcn UI for complex components, but heavily customize the borders and backgrounds to match the 'Luxury Swiss' aesthetic.",
+    "Install and use Outfit and Manrope via Google Fonts in index.css.",
+    "Use 'sonner' for toast notifications, customized to dark mode."
+  ],
+  "instructions_to_main_agent": {
+    "setup": "Update index.css to import Outfit and Manrope. Set root variables to match the dark theme defined above. The dashboard must default to dark mode.",
+    "layout": "Create a responsive sidebar navigation with glassmorphic top header on mobile. Ensure main content area has ample padding (p-6 or p-8).",
+    "social_media_cards": "In the Social Media Integration section, use the platform's brand color subtly (e.g., hover border color or a tiny indicator dot), but keep the card background neutral (#121212).",
+    "creator_management": "Use the provided avatar URLs for mock data in the table. Implement staggered entry animations for table rows."
+  }
+}
+
