@@ -118,7 +118,7 @@ Modules Covered
 
 ✅ Growth & Trend Analysis Module
 
-✅ Social Media Integration Module
+✅ Revenue Analytics Module
 
 Technologies Used
 React.js
