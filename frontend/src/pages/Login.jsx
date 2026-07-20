@@ -1,75 +1,100 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import API from "../services/api";
+import "./Login.css";
 
-export default function Login() {
+const Login = () => {
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
-  const login = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
-      const formData = new URLSearchParams();
-      formData.append("username", email);
-      formData.append("password", password);
+      console.log("Submitting login:", formData);
 
-      const response = await API.post(
-        "/api/auth/login",
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-          },
-        }
-      );
+      const response = await fetch("http://localhost:8000/auth/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-      localStorage.setItem("token", response.data.access_token);
+      if (!response.ok) throw new Error("Login failed");
 
-      alert("Login Successful");
+      const data = await response.json();
 
-      navigate("/");
+      // ✅ Save token under "token" so api.js can find it
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("user_id", data.user_id);
+        localStorage.setItem("role", data.role);
+
+        // Redirect to dashboard
+        navigate("/dashboard");
+      }
     } catch (err) {
-      console.log(err.response?.data);
-      alert("Invalid Email or Password");
+      console.error("Error:", err);
     }
   };
 
+  const handleGoogleLogin = () => {
+    window.location.href = "http://localhost:8000/auth/google";
+  };
+
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <form
-        onSubmit={login}
-        className="bg-white shadow-xl rounded-xl p-8 w-96"
-      >
-        <h1 className="text-3xl font-bold mb-6 text-center">
-          CreatorIQ Login
-        </h1>
+    <div className="login-page">
+      <div className="logo-section">CreatorIQ</div>
+      <div className="login-card">
+        <h1>Log in to your account</h1>
+        <p className="subtitle">Welcome back! Please enter your details to continue.</p>
 
-        <input
-          type="email"
-          className="border w-full p-3 mb-4 rounded"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="janedoe@example.com"
+              value={formData.email}
+              onChange={handleChange}
+              className="input-field"
+              required
+            />
+          </div>
 
-        <input
-          type="password"
-          className="border w-full p-3 mb-4 rounded"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="••••••••"
+              value={formData.password}
+              onChange={handleChange}
+              className="input-field"
+              required
+            />
+          </div>
 
-        <button
-          type="submit"
-          className="bg-blue-600 w-full text-white py-3 rounded hover:bg-blue-700"
-        >
-          Login
+          <button type="submit" className="submit-btn">Log In</button>
+        </form>
+
+        <button type="button" onClick={handleGoogleLogin} className="google-btn">
+          <img
+            src="https://www.gstatic.com/images/branding/product/1x/gsa_64dp.png"
+            alt="Google logo"
+            className="google-icon"
+          />
+          Sign in with Google
         </button>
-      </form>
+
+        <p className="signup-link">
+          Don’t have an account? <a href="/register">Sign Up</a>
+        </p>
+      </div>
     </div>
   );
-}
+};
+
+export default Login;

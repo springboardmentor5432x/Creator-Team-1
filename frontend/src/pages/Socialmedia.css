@@ -1,0 +1,92 @@
+.socialmedia-container {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.platform-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.platform-card:hover {
+  transform: translateY(-5px);
+}
+
+.platform-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.platform-card h3 {
+  margin: 10px 0;
+  color: #6b46c1;
+}
+
+.platform-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.connect-btn {
+  background-color: #6b46c1;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.connect-btn:hover {
+  background-color: #553c9a;
+}
+  .social-icon {
+  width: 24px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.social-icon {
+  width: 100px;   /* bigger for visibility */
+  height: 100px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.icons {
+  display: flex;
+  gap: 40px;        /* space between 🔔 ✉️ ⚙️ */
+  align-items: center;
+}
+
+.icon {
+  font-size: 28px;  /* increase icon size */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}

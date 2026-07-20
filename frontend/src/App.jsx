@@ -1,54 +1,55 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import Dashboard from "./pages/Dashboard";
+
 import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Register from "./pages/Register"; 
+import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import Settings from "./pages/Settings";
+import ContentAnalytics from "./pages/ContentAnalytics";
+import PrivateRoute from "./utils/PrivateRoute";
 
-import YouTube from "./pages/YouTube";
-import Instagram from "./pages/Instagram";
-import Facebook from "./pages/Facebook";
-import LinkedIn from "./pages/LinkedIn";
-import XPlatform from "./pages/XPlatform";
+import Notifications from "./pages/Notifications";
+import Messages from "./pages/Messages";
 
-import Analytics from "./pages/Analytics";
-import Revenue from "./pages/Revenue";
-import Content from "./pages/Content";
+// Newly added pages
+import AudienceAnalytics from "./pages/AudienceAnalytics";
+import GrowthTrends from "./pages/GrowthTrends";
+import SocialMedia from "./pages/SocialMedia";
+import RevenueAnalytics from "./pages/RevenueAnalytics";
+import Reports from "./pages/Reports";
 
-import NotFound from "./pages/NotFound";
+// servises  
+import API from "./servises/api.js";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Home */}
-        <Route path="/" element={<Dashboard />} />
+    <Routes>
+      {/* Default route */}
+      <Route path="/" element={<Navigate to="/register" replace />} />
 
-        {/* Authentication */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+      {/* Auth pages */}
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
 
-        {/* User */}
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+      {/* Core pages */}
+      <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
+      <Route path="/profile" element={<PrivateRoute><Profile /></PrivateRoute>} />
+      <Route path="/settings" element={<PrivateRoute><Settings /></PrivateRoute>} />
+      <Route path="/notifications" element={<PrivateRoute><Notifications /></PrivateRoute>} />
+      <Route path="/messages" element={<PrivateRoute><Messages /></PrivateRoute>} />
 
-        {/* Platforms */}
-        <Route path="/youtube" element={<YouTube />} />
-        <Route path="/instagram" element={<Instagram />} />
-        <Route path="/facebook" element={<Facebook />} />
-        <Route path="/linkedin" element={<LinkedIn />} />
-        <Route path="/x" element={<XPlatform />} />
+      {/* Analytics pages */}
+      <Route path="/contentanalytics" element={<PrivateRoute><ContentAnalytics /></PrivateRoute>} />
+      <Route path="/audienceanalytics" element={<PrivateRoute><AudienceAnalytics /></PrivateRoute>} />
+      <Route path="/socialmedia" element={<PrivateRoute><SocialMedia /></PrivateRoute>} />
+      <Route path="/growthtrends" element={<PrivateRoute><GrowthTrends /></PrivateRoute>} />
+      <Route path="/revenue" element={<PrivateRoute><RevenueAnalytics /></PrivateRoute>} />
+      <Route path="/reports" element={<PrivateRoute><Reports /></PrivateRoute>} />
 
-        {/* Dashboard Pages */}
-        <Route path="/analytics" element={<Analytics />} />
-        <Route path="/content" element={<Content />} />
-        <Route path="/revenue" element={<Revenue />} />
-
-        {/* 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+      {/* Fallback */}
+      <Route path="*" element={<h2>404 - Page Not Found</h2>} />
+    </Routes>
   );
 }
 

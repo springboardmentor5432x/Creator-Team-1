@@ -1,8 +1,0 @@
-fastapi
-uvicorn[standard]
-motor
-pydantic
-python-dotenv
-pyjwt
-passlib[bcrypt]
-cryptography
