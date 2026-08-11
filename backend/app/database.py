@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker
-
 # PostgreSQL database used by the application.
 DATABASE_URL = "postgresql+psycopg://postgres:Mahesh%40123@localhost:5432/creatoriq"
 
